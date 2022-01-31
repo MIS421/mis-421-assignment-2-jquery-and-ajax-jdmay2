@@ -1,17 +1,30 @@
 <!doctype html>
-
 <html lang="en">
-
 <head>
-
-  <link rel="stylesheet" href="./style.css">
-
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" integrity="sha512-sOC1C3U/7L42Ao1++jwVCpnllhbxnfD525JBZE2h1+cYnLg3aIE3G1RBWKSr/9cF5LxB1CxPckAvHqzz7O4apQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Jokko</title>
 </head>
-
-<body>
-
-  <script type="text/javascript" src="./script.js"></script>
-
+<body id="body">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-4DaiBX8rsgOoBSNLceQ/IixDF+uUDV0hJrQX/MJ9RwJZCDqbEp0EjIQodGxszPtTpwlenJznR2jkgDWqj4Hs+A==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./script.js"></script>
+    <div id="main-section">
+        <div id="header-section">
+            <h1 id="logowrap" onclick="changeBackground()"><img id="logo"
+                 src="./images/jokko-drop.png"
+                 height="100"
+                 alt="" /></h1>
+            <div id="search-bar">
+                <input id="query" autofocus autocomplete="on" spellcheck="true" placeholder="Search" aria-label="Search" onkeypress="searchSubmit(event)" />
+                <button id="search-button" onclick="apiSearch()">Search</button>
+                <button id="time-button" onclick="openTime()">Time</button>
+            </div>
+        </div>
+        <div id="time" title="Current Time"></div>
+        <div id="results-section">
+            <div id="searchResults"></div>
+        </div>
+    </div>
 </body>
-
 </html>
